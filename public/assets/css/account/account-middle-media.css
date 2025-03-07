@@ -1,0 +1,47 @@
+/* ==================== */
+/* Media Queries        */
+/* ==================== */
+
+/* Large screens (1920x1080) */
+@media (max-width: 1920px) and (max-height: 1080px) {
+
+  
+
+  }
+  
+  /* Medium screens (1440x1080) */
+  @media (max-width: 1440px) and (max-height: 1080px) {
+
+  
+
+  }
+  
+  /* Small screens (960x1080) */
+  @media (max-width: 960px) and (max-height: 1080px) {
+
+
+  
+  }
+  
+  /* Large screens (1920x720) */
+  @media (max-width: 1920px) and (max-height: 720px) {
+
+  
+
+  
+
+  
+  }
+  
+  /* Medium screens (1440x720) */
+  @media (max-width: 1440px) and (max-height: 720px) {
+
+  
+  
+  }
+  
+  /* Small screens (960x720) */
+  @media (max-width: 960px) and (max-height: 720px) {
+
+  
+  }

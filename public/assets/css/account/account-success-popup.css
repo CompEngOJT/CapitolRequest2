@@ -1,0 +1,96 @@
+/* Success Popup Styles */
+#driver-success-popup, 
+#vehicle-success-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(5px);
+}
+
+#driver-success-popup .popup-content, 
+#vehicle-success-popup .popup-content {
+    background-color: #fff;
+    padding: 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    width: 400px;
+    height: 280px;
+    max-width: 90%;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Success Popup Header - Full Width */
+#driver-success-popup .popup-header, 
+#vehicle-success-popup .popup-header {
+    background-color: #4A7D9E; /* Blue header */
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Success Icon */
+#driver-success-popup img, 
+#vehicle-success-popup img {
+    display: block;
+    margin: 20px auto 10px;
+    width: 60px; /* Adjust icon size */
+}
+
+#driver-success-popup h2, 
+#vehicle-success-popup h2 {
+    font-size: 16px;
+    color: white;
+}
+
+/* Success Message */
+#driver-success-popup p, 
+#vehicle-success-popup p {
+    font-size: 18px;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* Dashboard Button */
+#driver-success-popup .form-buttons, 
+#vehicle-success-popup .form-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#driver-success-popup .form-buttons button, 
+#vehicle-success-popup .form-buttons button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #4A7D9E; /* Blue button */
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+}
+
+#driver-success-popup .form-buttons button:hover, 
+#vehicle-success-popup .form-buttons button:hover {
+    background-color: #3B6B89;
+    transform: translateY(-2px);
+}

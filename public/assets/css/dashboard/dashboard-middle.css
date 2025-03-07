@@ -1,0 +1,94 @@
+/* ==================== */
+/* Middle Container     */
+/* ==================== */
+#middle-container {
+  position: fixed;
+  top: 0;
+  right: 25%;
+  width: 50%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #E9F2F9, #9ECFF6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9998;
+  padding: 20px;
+}
+
+/* ==================== */
+/* Content              */
+/* ==================== */
+#content {
+  text-align: left;
+  height: 95%;
+}
+
+#middle-container h1 {
+  font-size: clamp(14px, 2vw, 16px);
+  color: #41779C;
+  margin-bottom: clamp(20px, 10vh, 60px);
+}
+
+#middle-container h3 {
+  font-size: clamp(18px, 3vw, 24px);
+  color: #41779C;
+  margin-bottom: clamp(5px, 2vh, 10px);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+#middle-container p {
+  font-size: clamp(14px, 2.5vw, 18px);
+  color: #41779C;
+  margin-bottom: clamp(20px, 5vh, 40px);
+}
+
+/* ==================== */
+/* Request Now Button   */
+/* ==================== */
+#request-now {
+  display: inline-block;
+  padding: clamp(8px, 2vw, 10px) clamp(16px, 4vw, 20px);
+  background-color: #446F95;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: clamp(14px, 2.5vw, 18px);
+  font-weight: bold;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* ==================== */
+/* Paglaum Image        */
+/* ==================== */
+#paglaum {
+  width: 100%;
+  text-align: center;
+  margin-top: clamp(40px, 6vh, 50px);
+}
+
+#paglaum img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+/* ==================== */
+/* Copyright Image      */
+/* ==================== */
+#copyright {
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+}
+
+#copyright img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+#request-now:hover {
+  background-color: #2C66A8; /* Change background color on hover */
+  transform: scale(1.05); /* Slightly scale up the button */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
