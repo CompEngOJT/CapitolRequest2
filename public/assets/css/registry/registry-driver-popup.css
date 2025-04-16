@@ -21,7 +21,6 @@
     width: 600px;
     max-width: 90%; /* Responsive width */
     text-align: center;
-    animation: fadeIn 0.3s ease-in-out;
 }
 
 @keyframes fadeIn {

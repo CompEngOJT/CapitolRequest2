@@ -1,0 +1,246 @@
+/* Modal Base Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Darker overlay for better focus */
+    backdrop-filter: blur(8px); /* Stronger blur effect */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    border-radius: 16px; /* Larger radius for a modern look */
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Deeper shadow for depth */
+    animation: modalFadeIn 0.3s ease-in-out;
+    overflow: hidden; /* Ensures content doesn't overflow rounded corners */
+    margin: 5% auto; /* Center the modal vertically and horizontally */
+    position: relative; /* Ensure positioning works correctly */
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Modal Header */
+.modal-header {
+    padding: 24px;
+    background-color: #007bff; /* Blue header for a modern look */
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 22px; /* Larger font size */
+    font-weight: 600; /* Bold header */
+}
+
+.close {
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.close:hover {
+    color: #ffdd57; /* Yellow hover effect for close button */
+}
+
+/* Modal Body */
+.modal-body {
+    padding: 24px;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.request-detail-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px; /* Increased gap for better spacing */
+}
+
+.detail-row {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.detail-group {
+    flex: 1;
+    min-width: 200px; /* Ensures fields don't get too narrow */
+}
+
+.full-width {
+    width: 100%;
+}
+
+.detail-group label {
+    display: block;
+    font-weight: 600; /* Bold labels */
+    margin-bottom: 8px;
+    color: #555; /* Darker label color */
+    font-size: 14px;
+}
+
+.detail-group p {
+    margin: 0;
+    padding: 12px 0; /* More padding for better readability */
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+    color: #333; /* Darker text for better contrast */
+}
+
+/* Modal Footer */
+.modal-footer {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px; /* Adds spacing between buttons */
+}
+
+.btn {
+    padding: 12px 24px; /* Larger buttons for better clickability */
+    border: none;
+    border-radius: 8px; /* Slightly rounded corners */
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500; /* Medium font weight */
+    transition: all 0.2s ease; /* Smooth hover transition */
+}
+
+.btn:hover {
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.btn:active {
+    transform: translateY(0); /* Reset lift on click */
+}
+
+.btn-edit {
+    background-color: #ffc107; /* Yellow for edit button */
+    color: #000; /* Black text for better contrast */
+}
+
+.btn-edit:hover {
+    background-color: #e0a800; /* Darker yellow on hover */
+}
+
+.btn-save {
+    background-color: #17a2b8; /* Teal for save button */
+    color: white;
+}
+
+.btn-save:hover {
+    background-color: #138496; /* Darker teal on hover */
+}
+
+.btn-cancel {
+    background-color: #dc3545; /* Red for cancel button */
+    color: white;
+}
+
+.btn-cancel:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+.btn-approve {
+    background-color: #28a745; /* Green for approve button */
+    color: white;
+}
+
+.btn-approve:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.btn-disapprove {
+    background-color: #dc3545; /* Red for disapprove button */
+    color: white;
+}
+
+.btn-disapprove:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+.btn-close {
+    background-color: #6c757d; /* Gray for close button */
+    color: white;
+}
+
+.btn-close:hover {
+    background-color: #5a6268; /* Darker gray on hover */
+}
+
+/* Input Field Styling */
+.edit-field {
+    width: 100%;
+    padding: 12px 16px; /* Comfortable padding */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 14px;
+    color: #333; /* Dark text for better readability */
+    background-color: #f9f9f9; /* Light background */
+    transition: all 0.2s ease; /* Smooth transitions for focus and hover */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+    margin-top: 5px;
+}
+
+.edit-field:focus {
+    border-color: #007bff; /* Highlight border on focus */
+    background-color: #fff; /* White background on focus */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1); /* Blue glow effect */
+    outline: none; /* Remove default outline */
+}
+
+.edit-field:hover {
+    border-color: #bbb; /* Slightly darker border on hover */
+}
+
+/* Specific styling for date input */
+input[type="date"].edit-field {
+    appearance: none; /* Remove default styling */
+    background-color: #f9f9f9;
+    padding: 11px 16px; /* Adjust padding for date input */
+}
+
+input[type="date"].edit-field::-webkit-calendar-picker-indicator {
+    filter: invert(0.5); /* Darken the calendar icon */
+    cursor: pointer;
+}
+
+input[type="date"].edit-field:hover::-webkit-calendar-picker-indicator {
+    filter: invert(0.3); /* Darken further on hover */
+}
+
+/* Specific styling for number input */
+input[type="number"].edit-field {
+    appearance: none; /* Remove default styling */
+}
+
+input[type="number"].edit-field::-webkit-inner-spin-button,
+input[type="number"].edit-field::-webkit-outer-spin-button {
+    -webkit-appearance: none; /* Hide spin buttons */
+    margin: 0;
+}
+
+/* Placeholder styling */
+.edit-field::placeholder {
+    color: #999; /* Light placeholder text */
+    font-style: italic; /* Italic placeholder */
+}

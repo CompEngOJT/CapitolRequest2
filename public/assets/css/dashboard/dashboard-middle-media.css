@@ -1,181 +1,74 @@
-/* ==================== */
-/* Media Queries        */
-/* ==================== */
-
-/* Large screens (1920x1080) */
-@media (max-width: 1920px) and (max-height: 1080px) {
-  #middle-container h1 {
-    font-size: 30px;
+/* Media query for screens below 991px */
+@media (max-width: 991px) {
+    #middle {
+      position: fixed;
+      top: 70px; /* Align with header */
+      left: 0;
+      width: 100%; /* Take full width */
+      padding: 2%; /* Equal padding on all sides */
+    }
+    
+    #middle-container {
+      width: 100%;
+      max-width: 800px; /* Optional: limit maximum width for better readability */
+      margin: 0 auto; /* Center horizontally */
+    }
+    
+    /* Adjust content sizing for smaller screens */
+    #content {
+      padding: 30px 20px;
+    }
+    
+    /* Make heading and paragraph text smaller on mobile */
+    #middle-container h3 {
+      font-size: clamp(18px, 4vw, 24px);
+    }
+    
+    #middle-container p {
+      font-size: clamp(14px, 3vw, 18px);
+    }
+    
+    /* Smaller request button on mobile */
+    #request-now {
+      padding: 10px 25px;
+      font-size: clamp(13px, 2vw, 16px);
+    }
+    
+    /* Adjust image container for smaller screens */
+    .image-container {
+      width: 100%;
+      max-width: 500px;
+    }
+    
+    /* Make footer text smaller on mobile */
+    #footer {
+      font-size: 11px;
+      padding: 12px 15px;
+    }
   }
-
-  #middle-container h3 {
-    font-size: 30px;
-    margin-bottom: 20px;
+  
+  /* Additional media query for very small screens (mobile phones) */
+  @media (max-width: 576px) {
+    #middle {
+      padding: 1%;
+    }
+    
+    #content {
+      padding: 20px 15px;
+    }
+    
+    #middle-container h3 {
+      font-size: clamp(16px, 5vw, 20px);
+    }
+    
+    #request-now {
+      padding: 8px 20px;
+      margin-bottom: 25px;
+    }
+    
+    /* Further reduce footer text size */
+    #footer {
+      font-size: 10px;
+      padding: 10px;
+    }
   }
-
-  #middle-container p {
-    font-size: 24px;
-    margin-bottom: 70px;
-  }
-
-  #request-now {
-    font-size: 24px;
-    padding: 16px 32px;
-  }
-
-  #paglaum img,
-  #copyright img {
-    max-width: 80%;
-  }
-}
-
-/* Medium screens (1440x1080) */
-@media (max-width: 1440px) and (max-height: 1080px) {
-  #middle-container h1 {
-    font-size: 24px;
-  }
-
-  #middle-container h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-
-  #middle-container p {
-    font-size: 19px;
-    margin-bottom: 70px;
-  }
-
-  #request-now {
-    font-size: 15px;
-    padding: 16px 32px;
-    margin-bottom: 10px;
-  }
-
-  #paglaum img,
-  #copyright img {
-    max-width: 80%;
-  }
-}
-
-/* Small screens (960x1080) */
-@media (max-width: 960px) and (max-height: 1080px) {
-  #middle-container h1 {
-    font-size: 20px;
-  }
-
-  #middle-container h3 {
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
-
-  #middle-container p {
-    font-size: 19px;
-    margin-bottom: 70px;
-  }
-
-  #request-now {
-    font-size: 19px;
-    padding: 16px 32px;
-    margin-bottom: 70px;
-  }
-
-  #paglaum img,
-  #copyright img {
-    max-width: 80%;
-  }
-}
-
-/* Large screens (1920x720) */
-@media (max-width: 1920px) and (max-height: 720px) {
-  #content {
-    height: 95%;
-  }
-
-  #middle-container h1 {
-    font-size: 20px;
-  }
-
-  #middle-container h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-
-  #middle-container p {
-    font-size: 16px;
-    margin-bottom: 50px;
-  }
-
-  #request-now {
-    font-size: 14px;
-    padding: 14px 30px;
-    margin-bottom: 10px;
-  }
-
-  #paglaum img,
-  #copyright img {
-    max-width: 70%;
-  }
-}
-
-/* Medium screens (1440x720) */
-@media (max-width: 1440px) and (max-height: 720px) {
-  #content {
-    height: 95%;
-  }
-
-  #middle-container h1 {
-    font-size: 20px;
-  }
-
-  #middle-container h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-
-  #middle-container p {
-    font-size: 16px;
-    margin-bottom: 50px;
-  }
-
-  #request-now {
-    font-size: 14px;
-    padding: 14px 30px;
-    margin-bottom: 10px;
-  }
-
-  #paglaum img,
-  #copyright img {
-    max-width: 80%;
-  }
-}
-
-/* Small screens (960x720) */
-@media (max-width: 960px) and (max-height: 720px) {
-  #content {
-    height: 95%;
-  }
-
-  #middle-container h1 {
-    font-size: 20px;
-  }
-
-  #middle-container h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-
-  #middle-container p {
-    font-size: 16px;
-    margin-bottom: 50px;
-  }
-
-  #request-now {
-    font-size: 14px;
-    padding: 14px 30px;
-  }
-
-  #paglaum img,
-  #copyright img {
-    max-width: 80%;
-  }
-}

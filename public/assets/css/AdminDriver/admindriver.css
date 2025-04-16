@@ -1,0 +1,265 @@
+/* ================= CONTENT AREA ================= */
+#content {
+    margin-left: 24%;
+    margin-top: 4vh;
+    padding: 20px;
+    min-height: 90vh; /* Minimum height to fill most of the viewport */
+    height: auto; /* Allow it to grow with content */
+}
+
+/* ================= RECTANGLE ================= */
+#rectangle {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 0 10px 0 0;  /* Top Right Bottom Left - adds left margin only */
+}
+
+/* ================= HEADER INSIDE RECTANGLE ================= */
+.drivers-header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.drivers-header h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 2%;
+}
+
+.drivers-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+
+.driver-search {
+    padding: 8px 12px 8px 35px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 220px;
+    border: none;
+    outline: none;
+    background: transparent;
+    margin-left: 5px;
+    width: 100%;
+
+}
+
+.search-icon {
+    color: #888;
+
+}
+
+.new-driver-btn {
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: transparent;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+.new-driver-btn:hover {
+    background-color: #f8f9fa;
+}
+
+/* ================= TABLE STYLES ================= */
+.drivers-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.drivers-table th {
+    background-color: #f8f9fa;
+    padding: 12px 15px;
+    text-align: center;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.drivers-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e0e0e0;
+    color: #555;
+}
+
+/* Set width for the action column to prevent excessive space */
+.drivers-table th:nth-child(3),
+.drivers-table td:nth-child(3) {
+    width: 170px;
+    text-align: center;
+}
+
+/* Fixed width for name and position columns */
+.drivers-table th:nth-child(1),
+.drivers-table td:nth-child(1) {
+    width: 40%;
+    text-align: left;
+}
+
+.drivers-table th:nth-child(2),
+.drivers-table td:nth-child(2) {
+    width: 40%;
+    text-align: left;
+}
+
+.drivers-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+/* Style the action buttons like inventory page with icon buttons */
+.action-buttons button {
+    background: transparent;
+    border: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin: 0 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.view-btn {
+    color: #333;
+}
+
+.delete-btn-small {
+    color: #e74c3c;
+}
+/* Active state for delete button */
+.delete-btn-small.active {
+    background-color: #ff6b6b;
+    color: white;
+}
+/* Style for action icons */
+.view-icon, .delete-icon {
+    color: #333; /* Default icon color */
+    margin: 0 5px; /* Add spacing between icons */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.action-buttons button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Hide button text and only show icons */
+.action-buttons button span {
+    display: none;
+}
+
+/* ================= PAGINATION STYLES ================= */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.pagination .page-item {
+    margin: 0 2px;
+}
+
+.pagination .page-item .page-link {
+    padding: 8px 12px;
+    border: 1px solid #dee2e6;
+    color: #007bff;
+    background-color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #6c757d;
+    pointer-events: none;
+    cursor: not-allowed;
+    background-color: #fff;
+    border-color: #dee2e6;
+}
+
+.pagination .page-item:not(.active) .page-link:hover {
+    background-color: #f8f9fa;
+}
+
+/* ================= NOTIFICATION STYLES ================= */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 500;
+    z-index: 1000;
+    display: none;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.notification.success {
+    background-color: #4CAF50;
+}
+
+.notification.error {
+    background-color: #F44336;
+}
+
+.notification.warning {
+    background-color: #FF9800;
+}
+
+.notification.info {
+    background-color: #2196F3;
+}

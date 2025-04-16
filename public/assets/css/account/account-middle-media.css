@@ -1,47 +1,60 @@
-/* ==================== */
-/* Media Queries        */
-/* ==================== */
-
-/* Large screens (1920x1080) */
-@media (max-width: 1920px) and (max-height: 1080px) {
-
-  
-
+/* Media query for screens below 991px */
+@media (max-width: 991px) {
+  #middle {
+    position: fixed;
+    top: 70px; /* Align with header */
+    left: 0;
+    width: 100%; /* Take full width */
+    padding: 2%; /* Equal padding on all sides */
   }
   
-  /* Medium screens (1440x1080) */
-  @media (max-width: 1440px) and (max-height: 1080px) {
-
-  
-
+  #middle-container {
+    width: 100%;
+    max-width: 800px; /* Optional: limit maximum width for better readability */
+    margin: 0 auto; /* Center horizontally */
   }
   
-  /* Small screens (960x1080) */
-  @media (max-width: 960px) and (max-height: 1080px) {
-
-
-  
+  /* Adjust content sizing for smaller screens */
+  #content {
+    padding: 30px 20px;
   }
   
-  /* Large screens (1920x720) */
-  @media (max-width: 1920px) and (max-height: 720px) {
-
-  
-
-  
-
-  
+  /* Make heading and paragraph text smaller on mobile */
+  #middle-container h3 {
+    font-size: clamp(18px, 4vw, 24px);
   }
   
-  /* Medium screens (1440x720) */
-  @media (max-width: 1440px) and (max-height: 720px) {
-
-  
-  
+  #middle-container p {
+    font-size: clamp(14px, 3vw, 18px);
   }
   
-  /* Small screens (960x720) */
-  @media (max-width: 960px) and (max-height: 720px) {
-
-  
+  #middle-account-card {
+    max-width: 700px;
   }
+
+}
+/* Media query for screens below 768px */
+@media (max-width: 768px) {
+  #middle-account-card {
+    max-width: 500px;
+  }
+}
+
+/* Additional media query for very small screens (mobile phones) */
+@media (max-width: 576px) {
+  #middle {
+    padding: 1%;
+  }
+  
+  #content {
+    padding: 20px 15px;
+  }
+  
+  #middle-container h3 {
+    font-size: clamp(16px, 5vw, 20px);
+  }
+  
+  #middle-account-card {
+    max-width: 400px;
+  }
+}

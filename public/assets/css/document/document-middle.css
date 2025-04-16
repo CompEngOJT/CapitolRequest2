@@ -1,79 +1,170 @@
 /* ==================== */
-/* Middle Container     */
+/* Middle Wrapper (For Overflow) */
 /* ==================== */
-#middle-container {
+#middle {
     position: fixed;
-    top: 0;
-    right: 25%;
-    width: 50%;
-    height: 100vh;
-    background: linear-gradient(to bottom, #E9F2F9, #9ECFF6);
+    top: 70px; /* Align with header */
+    right: 0;
+    width: 75%;
+    height: calc(100vh - 70px);
+    overflow-y: auto; /* Handle overflow here */
+    padding: 2% 2% 2% 0; /* Top, Right, Bottom, Left padding */
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: #85B2D2 #f1f1f1;
+  }
+  
+  /* Custom scrollbar for WebKit browsers */
+  #middle::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  #middle::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+  
+  #middle::-webkit-scrollbar-thumb {
+    background-color: #85B2D2;
+    border-radius: 10px;
+  }
+  
+  /* ==================== */
+  /* Adjusted Middle Container */
+  /* ==================== */
+  #middle-container {
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    z-index: 9998;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2%;
+    overflow: visible;
+    transition: all 0.3s ease;
+  }
+  
+  #middle-container:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
+  
+  /* Content area */
+  #content {
+    width: 100%;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #middle-container h3 {
+    color: #41779C;
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  
+  #middle-container p {
+    color: #41779C;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  
+  #square {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9998;
-    padding: 20px;
-}
-
-/* ==================== */
-/* Content              */
-/* ==================== */
-#content {
-    text-align: left;
-    height: 95%;
-    width: 100%;
-}
-#middle-container h1{
-    color: #41779C;
-    margin-bottom: clamp(20px, 10vh, 60px); 
-}
-
-#middle-container h3{   
-    color: #41779C;
-    font-weight: bold;
-}
-#middle-container p{
-    color: #41779C;
-}
-
-#horizontal {
-    border-bottom: 5px solid #446F95; /* Black horizontal line */
-    margin: 10px 0; /* Add some spacing */
-}
-
-#square {
-    display: flex;
-    justify-content: center; /* Center the square container */
-    align-items: center; /* Center the image inside the square */
-    width: 50%; /* Adjust size as needed */
+    width: 40%;
     height: auto;
-    background-color: #85B2D2; /* Background color for the square */
-    border: 5px solid white; /* Optional: Add a border */
-    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
-    margin: 20px auto; /* Center the square container */
+    aspect-ratio: 1 / 1;
+    background-color: #85B2D2;
+    border: 5px solid #fff;
+    box-shadow: 6px 6px 0px rgba(17, 59, 88, 0.2);
+    margin: 20px auto;
     border-radius: 20px;
-}
-
-#square img {
-    max-width: 100%; /* Ensure the image fits inside the square */
-    max-height: 100%;
-}
-
-#middle-container h2 {
-    text-align: center; /* Center the h2 below the square */
-    margin-top: 20px; /* Add spacing above the h2 */
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+  
+  #square:hover {
+    transform: translateY(-5px);
+    box-shadow: 8px 8px 0px rgba(17, 59, 88, 0.3);
+  }
+  
+  #square img {
+    max-width: 90%;
+    max-height: 90%;
+    transition: all 0.3s ease;
+  }
+  
+  #middle-container h2 {
+    text-align: center;
+    margin-top: 20px;
     color: #113B58;
-    font-weight: bold;
-}
-#fuel-link {
-    display: block; /* Ensure the link takes up the full space of the container */
-    cursor: pointer; /* Change cursor to pointer on hover */
-}
-
-#fuel-link img {
-    max-width: 100%; /* Ensure the image fits inside the square */
-    max-height: 100%;
-}
-#fuel img:hover {
+    font-weight: 700;
+    font-size: 1.8rem;
+    position: relative;
+    padding-bottom: 12px;
+  }
+  
+  #middle-container h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    border-radius: 3px;
+  }
+  
+  #fuel-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+  
+  #fuel img {
+    transition: transform 0.3s ease;
+  }
+  
+  #fuel img:hover {
     transform: scale(1.1);
   }
+  
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  #middle {
+      position: fixed;
+      top: 70px;
+      left: 0; /* Start from the left edge */
+      right: auto; /* Reset right positioning */
+      width: 100%; /* Take full width */
+      height: calc(100vh - 70px);
+      padding: 2%;
+      overflow-y: auto;
+      z-index: 10; /* Ensure it's above other elements except the sidebar */
+  }
+  
+  #middle-container {
+      width: 90%;
+      margin: 0 auto 2% auto;
+      max-width: 600px; /* Limit maximum width on larger mobile devices */
+  }
+  
+  /* Adjust the square size to be more proportional on smaller screens */
+  #square {
+      width: 60%;
+  }
+}
+

@@ -1,33 +1,45 @@
 /* ==================== */
-/* Middle Container     */
+/* Middle Wrapper (For Overflow) */
 /* ==================== */
-#middle-container {
+#middle {
     position: fixed;
-    top: 0;
-    right: 25%;
-    width: 50%;
-    height: 100vh;
-    background: linear-gradient(to bottom, #E9F2F9, #9ECFF6);
+    top: 70px; /* Align with header */
+    right: 0;
+    width: 75%;
+    height: calc(100vh - 70px);
+    overflow-y: auto; /* Handle overflow here */
+    padding: 2% 2% 2% 0; /* Top, Right, Bottom, Left padding */
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: #85B2D2 #f1f1f1;
+  }
+  
+  /* ==================== */
+  /* Adjusted Middle Container */
+  /* ==================== */
+  #middle-container {
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    background: white;
     display: flex;
     justify-content: center;
-    align-items: center;
     z-index: 9998;
-    padding: 20px;
-}
-
-/* ==================== */
-/* Content              */
-/* ==================== */
-#content {
-    text-align: left;
-    height: 95%;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2%;
+    overflow: visible;
+  }
+  
+  /* Content area */
+  #content {
     width: 100%;
-}
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-#middle-container h1 {
-    color: #41779C;
-    margin-bottom: clamp(20px, 10vh, 60px); 
-}
 
 #middle-container h3 {
     color: #41779C;
@@ -45,7 +57,7 @@
 
 #squares-container {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     align-items: center; /* Center the image inside the square */
     width: 100%;
 }
@@ -61,6 +73,8 @@
     text-align: center;
     cursor: pointer; /* Change cursor to pointer on hover */
     transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effect */
+    margin-top: 25px;
+    margin-bottom: 25;
 }
 
 .square-button:hover {

@@ -1,0 +1,286 @@
+/* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #E9F2F9, #9ECFF6);
+    overflow: auto; /* Allow scrolling */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ================= HEADER STYLING ================= */
+#header {
+    width: 100%;
+    height: 10vh;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9998;
+}
+
+/* Profile container */
+#profile-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Profile icon */
+.profile-icon {
+    font-size: 45px;
+    color: #333;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+}
+
+/* Admin badge */
+.admin-badge {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Theme toggle button */
+#theme-toggle {
+    margin-left: auto;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect */
+#theme-toggle:hover {
+    color: #2C6EB5;
+}
+
+/* ================= SIDEBAR STYLING ================= */
+#sidebar {
+    width: 23%;
+    height: 100vh;
+    background: #E9F2F9;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+/* ================= SIDEBAR PROFILE STYLING ================= */
+#sidebar-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+#sidebar-profile .profile-icon {
+    margin-right: 0;
+    margin-bottom: 8px;
+    font-size: 80px;
+}
+
+#sidebar-profile .admin-badge {
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+/* Sidebar content */
+#sidebar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Logo container */
+#logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 10%;
+}
+
+#logo-container img {
+    width: 100px;
+    height: auto;
+}
+
+/* System title */
+#system-title {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Sidebar menu */
+.sidebar-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sidebar-menu a {
+    text-decoration: none;
+    color: inherit;
+    align-items: center;
+}
+
+/* Menu items */
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    font-size: 16px;
+    color: #333;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    cursor: pointer;
+    font-weight: 600;
+}
+.menu-item i {
+    margin-right: 20px; /* Adds spacing between icons and text */
+    font-size: 20px; /* Adjusts icon size for better alignment */
+}
+/* Blue "Online" text in light mode */
+.blue-text {
+    color: #3C74A6; /* Blue color */
+}
+
+/* Active menu item */
+.menu-item.active {
+    background: #2C6EB5;
+    color: white;
+    position: relative;
+}
+
+/* Border outside the sidebar */
+.menu-item.active::after {
+    content: '';
+    position: absolute;
+    left: -40px;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background: #2C6EB5;
+    border-radius: 0 5px 5px 0;
+}
+
+/* Hover effect */
+.menu-item:hover {
+    background: #2C6EB5;
+    position: relative;
+}
+
+/* Remove hover effect for active menu item */
+.menu-item.active:hover {
+    background: #2C6EB5;
+    color: white;
+    cursor: default;
+}
+
+/* Border effect on hover */
+.menu-item:hover:not(.active)::after {
+    content: '';
+    position: absolute;
+    left: -40px;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background: #2C6EB5;
+    border-radius: 0 5px 5px 0;
+}
+
+
+
+/* ================= DARK MODE STYLES ================= */
+body.dark-mode {
+    background: #2A2E35;
+}
+
+/* Dark mode header */
+body.dark-mode #header {
+    background: #4A5C6E;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Dark mode sidebar */
+body.dark-mode #sidebar {
+    background: #4A5C6E; /* Same as header */
+    box-shadow: 4px 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Dark mode admin badge */
+body.dark-mode .admin-badge {
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+/* Dark mode profile icon */
+body.dark-mode .profile-icon {
+    color: #fff;
+}
+
+/* Dark mode sidebar menu */
+body.dark-mode .menu-item {
+    color: #ddd;
+}
+
+body.dark-mode .menu-item.active {
+    background: #2C6EB5;
+    color: white;
+}
+
+body.dark-mode .menu-item:hover {
+    background: #2C6EB5;
+}
+/* Active menu item in dark mode */
+body.dark-mode .menu-item.active {
+    background: #8094A5; /* New color for active menu in dark mode */
+    color: white;
+}
+
+/* Border outside the sidebar for active menu item in dark mode */
+body.dark-mode .menu-item.active::after {
+    background: #8094A5;
+}
+/* Hover effect for menu items in dark mode */
+body.dark-mode .menu-item:hover {
+    background: #8094A5;
+    color: white;
+}
+
+/* Border outside the sidebar on hover in dark mode */
+body.dark-mode .menu-item:hover:not(.active)::after {
+    background: #8094A5;
+}
+/* System title in dark mode */
+body.dark-mode #system-title {
+    color: white;
+}
+
+/* Ensure the "Online" part remains visible */
+body.dark-mode .blue-text {
+    color: white;
+}
+/* Dark mode background color */
+body.dark-mode {
+    background: #364355;
+}

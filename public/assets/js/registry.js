@@ -28,6 +28,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const slidingSidebar = document.getElementById('sliding-sidebar');
     const body = document.body;
 
+    // Get the registry URL from a data attribute or directly
+    const registryUrl = '/registry'; // Default fallback path
+
     // Show popup when square button is clicked (Driver)
     squareButton.addEventListener('click', function () {
         driverPopup.style.display = 'flex';
@@ -130,46 +133,99 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Add event listener to the "Dashboard" button to submit the form (Driver)
+    // Add event listener to the "Dashboard" button to submit the form via AJAX (Driver)
     if (driverDashboardButton) {
         driverDashboardButton.addEventListener('click', function() {
-            // Submit the driver form
-            driverForm.submit();
+            // Get form data
+            const formData = new FormData(driverForm);
+            
+            // Create AJAX request
+            fetch(driverForm.getAttribute('action'), {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+                }
+            })
+            .then(response => {
+                if (!response.ok) {
+                    return response.json().then(data => {
+                        throw new Error(data.message || 'Network response was not ok');
+                    });
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Hide the success popup
+                driverSuccessPopup.style.display = 'none';
+                
+                if (data.success) {
+                    // Clear form fields
+                    driverForm.reset();
+                    
+                    // Reset the initial form popup
+                    driverPopup.style.display = 'none';
+                    
+                    // Redirect to the registry page - fixed path
+                    window.location.href = registryUrl;
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                // Hide success popup
+                driverSuccessPopup.style.display = 'none';
+                // Show error message
+                alert(error.message || 'There was a problem adding the driver. Please try again.');
+            });
         });
     }
 
-    // Add event listener to the "Dashboard" button to submit the form (Vehicle)
+    // Add event listener to the "Dashboard" button to submit the form via AJAX (Vehicle)
     if (vehicleDashboardButton) {
         vehicleDashboardButton.addEventListener('click', function() {
-            // Submit the vehicle form
-            vehicleForm.submit();
+            // Get form data
+            const formData = new FormData(vehicleForm);
+            
+            // Create AJAX request
+            fetch(vehicleForm.getAttribute('action'), {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+                }
+            })
+            .then(response => {
+                if (!response.ok) {
+                    return response.json().then(data => {
+                        throw new Error(data.message || 'Network response was not ok');
+                    });
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Hide the success popup
+                vehicleSuccessPopup.style.display = 'none';
+                
+                if (data.success) {
+                    // Clear form fields
+                    vehicleForm.reset();
+                    
+                    // Reset the initial form popup
+                    vehiclePopup.style.display = 'none';
+                    
+                    // Redirect to the registry page - fixed path
+                    window.location.href = registryUrl;
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                // Hide success popup
+                vehicleSuccessPopup.style.display = 'none';
+                // Show error message
+                alert(error.message || 'There was a problem adding the vehicle. Please try again.');
+            });
         });
     }
-
-    // Sidebar toggle functionality
-    if (toggleButton && slidingSidebar) {
-        toggleButton.addEventListener('click', function () {
-            if (slidingSidebar.style.left === '0px') {
-                slidingSidebar.style.left = '-350px'; // Hide sidebar
-                body.classList.remove('show-sidebar'); // Remove blur effect
-            } else {
-                slidingSidebar.style.left = '0px'; // Show sidebar
-                body.classList.add('show-sidebar'); // Add blur effect
-            }
-        });
-    }
-
-    // Hide sidebar when clicking outside it
-    document.addEventListener('click', function (event) {
-        const sidebar = document.getElementById('sliding-sidebar');
-        const sidebarToggle = document.getElementById('sidebar-toggle');
-        const menuIcon = document.getElementById('menu-icon');
-
-        if (sidebar && sidebarToggle && menuIcon) {
-            if (!sidebar.contains(event.target) && !sidebarToggle.contains(event.target) && !menuIcon.contains(event.target)) {
-                slidingSidebar.style.left = '-350px'; // Hide sidebar
-                body.classList.remove('show-sidebar'); // Remove blur effect
-            }
-        }
-    });
 });

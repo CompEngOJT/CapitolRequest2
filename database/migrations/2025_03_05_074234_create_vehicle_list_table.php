@@ -15,8 +15,8 @@ class CreateVehicleListTable extends Migration
     {
         Schema::create('vehicle_list_table', function (Blueprint $table) {
             $table->id(); // Auto-incrementing primary key
-            $table->string('equipment_type'); // First Name
-            $table->string('unit'); // Last Name
+            $table->string('equipment_type'); 
+            $table->string('unit'); 
             $table->timestamps(); // Created_at and Updated_at timestamps
         });
     }

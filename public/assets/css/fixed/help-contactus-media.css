@@ -1,0 +1,162 @@
+/* Responsive styles for both popups */
+@media (max-width: 768px) {
+  /* General popup adjustments */
+  .help-popup-content,
+  .contactus-popup-content {
+    max-height: 90vh;
+    overflow-y: auto;
+    width: 95%;
+    margin: 20px auto;
+  }
+  
+  /* Adjust popup positioning for scrolling */
+  .help-popup-content {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .contactus-popup-content {
+    margin: 20px auto;
+  }
+  
+  /* Header adjustments */
+  .popup-header h3,
+  .contactus-popup-header h3 {
+    font-size: 18px;
+  }
+  
+  /* Popup body padding adjustments */
+  .popup-body,
+  .contactus-popup-body {
+    padding: 20px 15px;
+    padding-bottom: 40px;
+  }
+  
+  /* Contact us grid change to single column */
+  .contactus-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  /* Step container adjustments */
+  .step-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .step:nth-child(1),
+  .step:nth-child(2),
+  .step:nth-child(3) {
+    grid-column: 1;
+  }
+  
+  .step:nth-child(1) { grid-row: 1; }
+  .step:nth-child(2) { grid-row: 2; }
+  .step:nth-child(3) {
+    grid-row: 3;
+    max-width: 100%;
+  }
+  
+  /* Step image size reduction */
+  .step-image {
+    width: 120px;
+    height: 120px;
+  }
+  
+  /* Button width adjustments */
+  .request-now-btn,
+  .submit-btn {
+    width: 100%;
+    max-width: 200px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  
+  /* Make overlays scrollable */
+  .overlay,
+  .contactus-overlay {
+    overflow-y: auto;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  
+  /* Update animations */
+  @keyframes popup-fade-in {
+    from {
+      opacity: 0;
+      transform: translateX(-50%) translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+  
+  @keyframes contactusFadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjustments for very small screens */
+  .help-popup-content,
+  .contactus-popup-content {
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+  }
+  
+  .popup-header,
+  .contactus-popup-header {
+    padding: 12px 15px;
+  }
+  
+  /* Contact card layout adjustments */
+  .contactus-card {
+    flex-direction: column;
+  }
+  
+  .contactus-image {
+    width: 100%;
+    height: 130px;
+  }
+  
+  /* Contact buttons stacking for very small screens */
+  .contactus-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .contactus-btn {
+    width: 100%;
+  }
+  
+  /* Reduce step images further */
+  .step-image {
+    width: 100px;
+    height: 100px;
+  }
+  
+  /* Adjust step text */
+  .step-text {
+    font-size: 14px;
+  }
+  
+  /* Adjust step number */
+  .step-number {
+    font-size: 14px;
+    padding: 5px 0;
+  }
+  
+  /* Center close buttons better */
+  .close-btn,
+  .contactus-close-btn {
+    font-size: 24px;
+    height: 30px;
+    width: 30px;
+  }
+}

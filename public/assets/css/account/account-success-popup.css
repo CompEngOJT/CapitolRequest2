@@ -1,30 +1,32 @@
 /* Success Popup Styles */
-#driver-success-popup, 
-#vehicle-success-popup {
-    display: none;
+#driver-success-popup {
+    display: none; /* Initially hidden */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    justify-content: center;
-    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 9999;
     backdrop-filter: blur(5px);
 }
 
-#driver-success-popup .popup-content, 
-#vehicle-success-popup .popup-content {
+/* This will make it appear centered when shown */
+#driver-success-popup.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#driver-success-popup .popup-content {
     background-color: #fff;
     padding: 0;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
     width: 400px;
-    height: 280px;
+    height: 300px; /* Fixed height */
     max-width: 90%;
     text-align: center;
-    animation: fadeIn 0.3s ease-in-out;
     position: relative;
     overflow: hidden;
 }

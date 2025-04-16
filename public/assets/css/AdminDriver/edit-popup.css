@@ -1,0 +1,184 @@
+
+/* Edit Driver Modal Styles */
+#editDriverModal.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: opacity 0.3s ease;
+}
+
+.edit-modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 0;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    transform: translateY(0);
+    transition: transform 0.3s ease-out;
+    overflow: hidden;
+}
+
+.edit-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 25px;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #f8f9fa;
+    border-radius: 12px 12px 0 0;
+}
+
+.edit-modal-header h3 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.edit-modal-header .edit-close {
+    color: #95a5a6;
+    font-size: 28px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.edit-modal-header .edit-close:hover {
+    color: #e74c3c;
+    transform: scale(1.1);
+}
+
+.edit-modal-body {
+    padding: 25px;
+}
+
+.edit-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.edit-cancel-btn {
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    color: #34495e;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.edit-cancel-btn:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-1px);
+}
+
+.edit-save-btn {
+    padding: 10px 20px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.edit-save-btn:hover {
+    background-color: #27ae60;
+    transform: translateY(-1px);
+}
+
+/* Edit button style */
+.edit-btn {
+    color: #f39c12;
+}
+
+.edit-btn:hover {
+    background-color: #e67e22;
+}
+
+/* Form styles */
+#editDriverForm .form-group {
+    margin-bottom: 20px;
+}
+
+#editDriverForm label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #7f8c8d;
+    font-weight: 500;
+}
+
+#editDriverForm input,
+#editDriverForm select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+#editDriverForm input:focus,
+#editDriverForm select:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+/* Success message styling */
+.edit-success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.edit-success-message::before {
+    content: "✓";
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+/* Error message styling */
+.edit-error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.edit-error-message::before {
+    content: "⚠️";
+    margin-right: 10px;
+    font-size: 16px;
+}

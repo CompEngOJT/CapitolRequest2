@@ -1,0 +1,209 @@
+/* ==================== */
+/* Body and HTML        */
+/* ==================== */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #E9F2F9, #9ECFF6);
+  overflow-x: hidden; /* Allow vertical scrolling but prevent horizontal */
+}
+
+/* ==================== */
+/* Adjusted Container   */
+/* ==================== */
+#container {
+  position: fixed;
+  top: calc(70px + 2%); /* Adjusted to account for header height */
+  left: 2%;
+  width: 20%;
+  height: calc(100vh - 70px - 4%); /* Adjusted height with bottom margin */
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 20px;
+  border-radius: 20px;
+  margin-bottom: 2%; /* Added explicit margin bottom */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, width 0.3s ease, left 0.3s ease;
+  overflow-y: auto;
+  z-index: 1000; /* Higher than content but lower than header */
+}
+
+/* ==================== */
+/* Profile Icon         */
+/* ==================== */
+#profile {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.profile-icon {
+  width: clamp(80px, 10vw, 120px);
+  height: clamp(80px, 10vw, 120px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-icon i {
+  font-size: clamp(50px, 7vw, 80px);
+  color: #446F95;
+}
+
+/* ==================== */
+/* Admin Badge          */
+/* ==================== */
+.admin-badge {
+  background: #2C66A8;
+  color: white;
+  font-size: clamp(12px, 1.5vw, 14px);
+  font-weight: bold;
+  padding: clamp(6px, 1vw, 8px) clamp(16px, 2vw, 24px);
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* ==================== */
+/* Sidebar              */
+/* ==================== */
+#sidebar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  transition: transform 0.3s ease;
+}
+
+/* Sidebar links */
+.sidebar-link {
+  width: 100%;
+  padding: 12px 20px;
+  text-align: center;
+  color: #446F95;
+  font-size: 18px;
+  text-decoration: none;
+  transition: border-left 0.3s ease, color 0.3s ease, font-weight 0.3s ease;
+  border-left: 4px solid transparent;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+}
+
+.sidebar-link.active,
+.sidebar-link:hover {
+  border-left: 4px solid #2C66A8;
+  color: #2C66A8;
+  font-weight: bold;
+}
+
+.sidebar-link.active {
+  font-weight: bold;
+}
+
+/* ==================== */
+/* Sidebar Toggle       */
+/* ==================== */
+.sidebar-toggle {
+  border: none;
+  background: transparent;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: white;
+  padding: 0;
+  margin-right: 15px;
+  display: none; /* Hidden by default, will be shown via JS when width <= 991px */
+}
+
+/* ==================== */
+/* Content Adjustment   */
+/* ==================== */
+.content-wrapper {
+  margin-left: calc(20% + 4%); /* Sidebar width + margin */
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+/* ==================== */
+/* Responsive Styles    */
+/* ==================== */
+@media (max-width: 991px) {
+  #header-logo img{
+    display: none;
+  }
+  /* Adjust container for mobile */
+  #container {
+    width: 250px;
+    left: -250px; /* Hide off-screen */
+    top: 70px; /* Align with header */
+    height: calc(100vh - 70px);
+    border-radius: 0 20px 20px 0;
+    margin-bottom: 0;
+    position: fixed;
+  }
+  
+  /* Show toggle button */
+  .sidebar-toggle {
+    display: block;
+  }
+  
+  /* Content takes full width */
+  .content-wrapper {
+    margin-left: 0 !important;
+  }
+  
+  /* When sidebar is open */
+  #container:not(.sidebar-collapsed) {
+    left: 0;
+    transform: translateX(0);
+  }
+  
+  /* Overlay */
+  #sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999; /* Above content but below sidebar */
+  }
+}
+
+/* ==================== */
+/* Animation States     */
+/* ==================== */
+#sidebar.collapsed {
+  transform: translateX(-100%);
+}
+
+#sidebar:not(.collapsed) {
+  transform: translateX(0);
+}
+
+/* For desktop collapsed state */
+@media (min-width: 992px) {
+  #container.sidebar-collapsed {
+    width: 0;
+    overflow: hidden;
+    left: -20%;
+  }
+  
+  .sidebar-collapsed + .content-wrapper {
+    margin-left: 0;
+  }
+}
+
+/* Fix for main header */
+#main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  z-index: 1100; /* Higher than sidebar */
+}

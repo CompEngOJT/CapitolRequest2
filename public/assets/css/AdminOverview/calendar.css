@@ -1,0 +1,265 @@
+/* Custom Calendar Styles */
+#calendar {
+    background-color: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    height: 350px;
+    width: 100%;
+    position: relative;
+    overflow: auto; /* Enable scrolling if needed */
+}
+
+/* FullCalendar specific overrides */
+.fc {
+    height: 100%;
+    font-family: inherit;
+    max-height: 320px; /* Control overall FC container height */
+}
+
+.fc .fc-toolbar {
+    margin-bottom: 10px !important;
+}
+
+.fc .fc-toolbar-title {
+    font-size: 16px !important;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.fc-theme-standard .fc-scrollgrid {
+    border: none !important;
+}
+
+/* View container */
+.fc-view-harness {
+    height: auto !important;
+    min-height: 220px !important; /* Set min-height to ensure visibility */
+    max-height: 250px !important; /* Limit maximum height */
+}
+
+/* Header row */
+.fc-col-header-cell {
+    background-color: #f8fafc;
+    padding: 8px 0 !important;
+}
+
+.fc-col-header-cell-cushion {
+    color: #4a5568 !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem;
+    text-decoration: none !important;
+    padding: 4px !important;
+}
+
+/* Day cells */
+.fc-daygrid-day {
+    height: 30px !important; /* Reduce height of day cells */
+    max-height: 35px !important;
+}
+
+.fc .fc-daygrid-day-frame {
+    padding: 2px !important;
+    min-height: auto !important; /* Let it grow naturally */
+    height: 100%;
+}
+
+.fc-daygrid-day-number {
+    color: #4a5568 !important;
+    text-decoration: none !important;
+    font-size: 0.85rem;
+    padding: 4px !important;
+}
+
+/* Today highlight */
+.fc .fc-daygrid-day.fc-day-today {
+    background-color: #ebf8ff !important;
+}
+
+.fc .fc-daygrid-day.fc-day-today .fc-daygrid-day-number {
+    background-color: #3182ce;
+    color: white !important;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Other month days */
+.fc-day-other .fc-daygrid-day-number {
+    opacity: 0.4;
+}
+
+/* Button styling */
+.fc .fc-button-primary {
+    background-color: #f1f5f9 !important;
+    border: 1px solid #e2e8f0 !important;
+    color: #4a5568 !important;
+    padding: 6px 12px !important;
+    border-radius: 6px !important;
+    font-size: 0.85rem !important;
+    transition: all 0.2s ease;
+    box-shadow: none !important;
+}
+
+.fc .fc-button-primary:hover {
+    background-color: #3182ce !important;
+    border-color: #3182ce !important;
+    color: white !important;
+}
+
+.fc .fc-button-primary:disabled {
+    background-color: #f1f5f9 !important;
+    border: 1px solid #e2e8f0 !important;
+    color: #a0aec0 !important;
+    opacity: 0.7;
+}
+
+/* Active button */
+.fc .fc-button-active {
+    background-color: #3182ce !important;
+    border-color: #3182ce !important;
+    color: white !important;
+}
+
+/* Remove the event styling since we'll color the day cells instead */
+.fc-event {
+    display: none !important; /* Hide all event elements completely */
+}
+
+/* Style for cells with events - using the specified blue background */
+.fc-daygrid-day.has-event {
+    background-color: #48a3ff !important; /* Using the specified blue color */
+}
+
+/* Keep the day number visible */
+.fc-daygrid-day-number {
+    display: inline-block !important;
+    visibility: visible !important;
+}
+
+/* Make tooltip more visible */
+.tooltip-inner {
+    background-color: #2d3748 !important;
+    color: white !important;
+    padding: 6px 10px !important;
+    border-radius: 4px !important;
+    font-weight: 500 !important;
+}
+/* Remove any potential text shadow that might show text */
+.fc-event-title, .fc-event-time {
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    display: none !important;
+}
+
+/* Enhanced event styling with hover effects */
+.calendar-event-interactive {
+    position: relative;
+    z-index: 5;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.calendar-event-interactive:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 10;
+}
+
+.calendar-event-interactive::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    box-shadow: 0 0 0 2px #fff;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+}
+
+.calendar-event-interactive:hover::after {
+    opacity: 1;
+}
+
+/* Fix event display */
+.fc-daygrid-event-harness {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Hide specific elements we don't need */
+.fc-daygrid-day-events {
+    margin-top: 2px !important;
+}
+
+.fc-daygrid-more-link {
+    font-size: 0.75rem !important;
+    color: #3182ce !important;
+}
+
+/* Hide week number if showing */
+.fc-daygrid-week-number {
+    display: none !important;
+}
+
+/* Fix for potential z-index issues */
+.fc-view-harness {
+    z-index: 1 !important;
+}
+
+/* Ensure the calendar rows are visible */
+.fc-scrollgrid-sync-table {
+    height: auto !important;
+}
+
+/* Better handling of day cell content */
+.fc-daygrid-day-frame {
+    display: flex;
+    flex-direction: column;
+}
+
+.fc-daygrid-day-top {
+    flex: 0;
+}
+
+.fc-daygrid-day-events {
+    flex: 1;
+    overflow: hidden;
+    max-height: 20px; /* Control maximum event display height */
+}
+
+/* Improve event display in tight spaces */
+.fc-event {
+    margin: 1px 0 !important;
+    padding: 0 2px !important;
+    line-height: 1.2 !important;
+}
+
+/* Event details modal styling */
+#eventDetailsModal .modal-header {
+    color: white;
+    font-weight: bold;
+}
+
+#eventDetailsModal .modal-content {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Tooltip customization */
+.tooltip-inner {
+    background-color: #2d3748;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    max-width: 200px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
