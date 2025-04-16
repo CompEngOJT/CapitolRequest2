@@ -140,15 +140,4 @@
         padding: 10px;
         margin-left: 10px;
     }
-    #request-now1 {
-        font-size: 20px;
-        margin-left: 10px;
-    }
-    #paglaum-image img,
-    #copyright-image img {
-        width: 95%;
-    }
-    #paglaum-image {
-        margin-top: 40px;
-    }
 }

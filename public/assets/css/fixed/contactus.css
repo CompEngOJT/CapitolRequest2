@@ -1,0 +1,207 @@
+/* Contact Us Popup Styles - Improved Design */
+.contactus-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+}
+
+.contactus-popup-content {
+  background-color: white;
+  width: 100%;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  animation: popup-fade-in 0.3s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes contactusFadeIn {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.contactus-popup-header {
+  background: linear-gradient(135deg, #0062cc 0%, #007bff 100%);
+  color: white;
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contactus-popup-header h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.contactus-close-btn {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.contactus-close-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.contactus-popup-body {
+  padding: 30px;
+  background-color: #f8f9fa;
+}
+
+.contactus-subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #6c757d;
+  margin-bottom: 25px;
+  font-weight: 400;
+}
+
+/* Contact Grid */
+.contactus-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+
+.contactus-card {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #eaeaea;
+}
+
+.contactus-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  border-color: #d0d0d0;
+}
+
+.contactus-image {
+  width: 110px;
+  min-width: 110px;
+  height: 110px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f1f1;
+}
+
+.contactus-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.contactus-card:hover .contactus-image img {
+  transform: scale(1.05);
+}
+
+.contactus-info {
+  padding: 18px;
+  flex-grow: 1;
+}
+
+.contactus-info h4 {
+  margin: 0 0 8px 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: #343a40;
+}
+
+.contactus-info p {
+  margin: 0 0 15px 0;
+  color: #6c757d;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.contactus-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.contactus-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 15px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s;
+  min-width: 80px;
+}
+
+.contactus-btn i {
+  margin-right: 6px;
+}
+
+.email-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.email-btn:hover {
+  background-color: #e53935;
+  box-shadow: 0 2px 8px rgba(244, 67, 54, 0.4);
+}
+
+.facebook-btn {
+  background-color: #3b5998;
+  color: white;
+}
+
+.facebook-btn:hover {
+  background-color: #344e86;
+  box-shadow: 0 2px 8px rgba(59, 89, 152, 0.4);
+}
+
+.contactus-footer {
+  text-align: center;
+  margin-top: 5px;
+  padding: 15px;
+  background-color: #e9ecef;
+  border-radius: 10px;
+  color: #495057;
+  font-size: 15px;
+}
+
+.contactus-footer p {
+  margin: 0;
+}
+
+.contactus-footer strong {
+  color: #0062cc;
+}

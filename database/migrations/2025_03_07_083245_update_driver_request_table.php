@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class DriverRequestTable extends Migration
+class UpdateDriverRequestTable  extends Migration
 {
     /**
      * Run the migrations.
@@ -27,8 +27,6 @@ class DriverRequestTable extends Migration
             $table->string('requested_by'); // Requested By
             $table->string('division'); // Division
             $table->string('status')->default('Under Review'); // Status with default value
-            $table->unsignedBigInteger('product_id'); // Foreign key to total_stocks_table
-            $table->foreign('product_id')->references('id')->on('total_stocks_table')->onDelete('cascade');
             $table->timestamps(); // Created at and Updated at timestamps
         });
     }

@@ -1,0 +1,262 @@
+/* ==================== */
+/* Middle Wrapper (For Overflow) */
+/* ==================== */
+#middle {
+    position: fixed;
+    top: 70px; /* Align with header */
+    right: 0;
+    width: 75%;
+    height: calc(100vh - 70px);
+    overflow-y: auto; /* Handle overflow here */
+    padding: 2% 2% 2% 0; /* Top, Right, Bottom, Left padding */
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: #85B2D2 #f1f1f1;
+  }
+  
+  /* ==================== */
+  /* Adjusted Middle Container */
+  /* ==================== */
+  #middle-container {
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    z-index: 9998;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2%;
+    overflow: visible;
+  }
+  
+  /* Content area */
+  #content {
+    width: 100%;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+#middle-container h3 {
+    color: #41779C;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+#horizontal {
+    border-bottom: 5px solid #446F95;
+    margin: 10px 0;
+}
+
+#middle-container p {
+    color: #41779C;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+/* Table Container Wrapper - Add this */
+.table-container {
+    width: 100%;
+    overflow: hidden; /* Ensures the rounded corners display correctly */
+    border-radius: 5px; /* Match the existing border radius */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+}
+/* Table Header Styles */
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #446F95;
+    padding: 10px 8px; /* Adjusted to match table cell padding */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* Add this to your CSS file or <style> tag */
+.filter-container {
+    margin-bottom: 20px;
+}
+
+#driver-filter {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #446F95;
+    border-radius: 5px;
+    outline: none;
+}
+
+#driver-filter:focus {
+    border-color: #9ECFF6;
+    box-shadow: 0 0 5px rgba(148, 186, 239, 0.5);
+}
+
+
+.table-header h2 {
+    color: white; /* Text color for "All Requests" header */
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Table Styles */
+.request-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0; /* Remove margin to connect with the header */
+    font-size: 10px; /* Smaller font size for the table */
+    border-top: none; /* Remove top border to connect with the header */
+    overflow: hidden; /* Ensure rounded corners are visible */
+}
+
+.request-table th,
+.request-table td {
+    padding: 8px; /* Reduced padding */
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* Alternating Row Colors */
+.request-table .even-row {
+    background-color: #E9F0F6;
+}
+
+.request-table .odd-row {
+    background-color: white;
+}
+
+/* Include table header in alternating colors */
+.request-table thead tr {
+    background-color: #E9F0F6; /* Match the even-row color */
+}
+
+
+.pagination-container {
+    background-color: #E9F0F6; /* Light blue background */
+    padding: 10px 0; /* Space above and below */
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px; /* Match table row height */
+}
+
+/* Pagination Container */
+.pagination-container {
+    background-color: #E9F0F6;
+    padding: 10px 15px; /* Match table padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Pagination Buttons */
+.pagination {
+    display: flex;
+    gap: 6px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pagination .page-link {
+    padding: 6px 10px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: #446F95;
+    border: 1px solid #446F95;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+/* Hover and Active States */
+.pagination .page-link:hover,
+.pagination .page-item.active .page-link {
+    background-color: #446F95;
+    color: white;
+}
+/* Add this to your CSS file or <style> tag */
+.filter-button {
+    background-color: #446F95;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.filter-button:hover {
+    background-color: #365a7a;
+}
+
+/* Modal Styles */
+.modal {
+
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 500px;
+    height: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+

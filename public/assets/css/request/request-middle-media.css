@@ -1,144 +1,64 @@
-/* ==================== */
-/* Media Queries        */
-/* ==================== */
+/* Media query for screens below 991px */
+@media (max-width: 991px) {
+  #middle {
+    position: fixed;
+    top: 70px; /* Align with header */
+    left: 0;
+    width: 100%; /* Take full width */
+    padding: 2%; /* Equal padding on all sides */
+  }
+  
+  #middle-container {
+    width: 100%;
+    max-width: 800px; /* Optional: limit maximum width for better readability */
+    margin: 0 auto; /* Center horizontally */
+  }
+  
+  /* Adjust content sizing for smaller screens */
+  #content {
+    padding: 30px 20px;
+  }
+  
+  /* Make heading and paragraph text smaller on mobile */
+  #middle-container h3 {
+    font-size: clamp(18px, 4vw, 24px);
+  }
+  
+  #middle-container p {
+    font-size: clamp(14px, 3vw, 18px);
+  }
+  
 
-/* Large screens (1920x1080) */
-@media (max-width: 1920px) and (max-height: 1080px) {
-  #middle-container h1 {
-      font-size: 30px;
-  }
-  #request-rectangle{
-    max-width: 800px;
-    height: auto;
-
-  }
-  #form-header {
-      font-size: 24px;
-  }
-  .form-group{
-    margin-top: 45px;
-  }
-
-  .form-control {
-      font-size: 0.9em;
-  }
-
-  .form-group label {
-      font-size: 1em;
-  }
-
-  .submit-button {
-      font-size: 1em;
-      padding: 12px 24px;
+  
+  /* Make footer text smaller on mobile */
+  #footer {
+    font-size: 11px;
+    padding: 12px 15px;
   }
 }
-  
-  /* Medium screens (1440x1080) */
-  @media (max-width: 1440px) and (max-height: 1080px) {
-    #middle-container h1 {
-      font-size: 24px;
-  }
-  #request-rectangle{
-    max-width: 800px;
-    height: auto;
 
-  }
-  #form-header {
-      font-size: 24px;
-  }
-  .form-group{
-    margin-top: 45px;
-  }
-
-  .form-control {
-      font-size: 0.9em;
-  }
-
-  .form-group label {
-      font-size: 1em;
-  }
-
-  .submit-button {
-      font-size: 1em;
-      padding: 12px 24px;
+/* Additional media query for very small screens (mobile phones) */
+@media (max-width: 576px) {
+  #middle {
+    padding: 1%;
   }
   
+  #content {
+    padding: 20px 15px;
   }
   
-  /* Small screens (960x1080) */
-  @media (max-width: 960px) and (max-height: 1080px) {
-    .joint-dropdown select:not([value=""]) + label, .form-control:not([value=""]) + label{
-      font-size: 0.6em;
-    }
-  
+  #middle-container h3 {
+    font-size: clamp(16px, 5vw, 20px);
   }
   
-  /* Large screens (1920x720) */
-  @media (max-width: 1920px) and (max-height: 720px) {
-    #middle-container h1 {
-      font-size: 30px;
+  #request-now {
+    padding: 8px 20px;
+    margin-bottom: 25px;
   }
-  #request-rectangle{
-    max-width: 600px;
-    height: auto;
-
-  }
-  #form-header {
-      font-size: 24px;
-  }
-  .form-group{
-    margin-top: 30px;
-  }
-
-  .form-control {
-      font-size: 0.9em;
-  }
-
-  .form-group label {
-      font-size: 1em;
-  }
-
-  .submit-button {
-      font-size: 1em;
-      padding: 12px 24px;
+  
+  /* Further reduce footer text size */
+  #footer {
+    font-size: 10px;
+    padding: 10px;
   }
 }
-  
-  /* Medium screens (1440x720) */
-  @media (max-width: 1440px) and (max-height: 720px) {
-    #middle-container h1 {
-      font-size: 30px;
-  }
-  #request-rectangle{
-    max-width: 600px;
-    height: auto;
-
-  }
-  #form-header {
-      font-size: 24px;
-  }
-  .form-group{
-    margin-top: 25px;
-  }
-
-  .form-control {
-      font-size: 0.9em;
-  }
-
-  .form-group label {
-      font-size: 1em;
-  }
-
-  .submit-button {
-      font-size: 1em;
-      padding: 12px 24px;
-  }
-  }
-  
-  /* Small screens (960x720) */
-  @media (max-width: 960px) and (max-height: 720px) {
-    .joint-dropdown select:not([value=""]) + label, .form-control:not([value=""]) + label{
-      font-size: 0.5em;
-    }
-  
-  }

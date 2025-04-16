@@ -1,0 +1,51 @@
+/* Dark Mode Styles */
+body.dark-mode {
+    background: linear-gradient(to bottom, #1a2a38, #0d1520);
+  }
+  
+  /* Header Dark Mode */
+  body.dark-mode #main-header {
+    background: #1a3045;
+  }
+  
+  /* Container (Sidebar) Dark Mode */
+  body.dark-mode #container {
+    background: #2a3a4a;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Sidebar Links Dark Mode */
+  body.dark-mode .sidebar-link {
+    color: #9ecff6;
+  }
+  
+  body.dark-mode .sidebar-link.active,
+  body.dark-mode .sidebar-link:hover {
+    border-left: 4px solid #9ecff6;
+    color: #ffffff;
+  }
+  
+  /* Profile Border Dark Mode */
+  body.dark-mode #profile img {
+    border: 3px solid #9ecff6;
+  }
+  
+  /* Admin Badge Dark Mode */
+  body.dark-mode .admin-badge {
+    background: #1a3045;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Add dark mode styles for any other components that need them */
+  /* For example, if you have content areas, forms, buttons, etc. */
+  body.dark-mode .content-area {
+    background: #2a3a4a;
+    color: #e0e0e0;
+  }
+  
+  
+  /* Transition for smoother toggle */
+  body, #main-header, #container, .sidebar-link, #profile img, .admin-badge, .content-area, button {
+    transition: all 0.3s ease;
+  }
+
