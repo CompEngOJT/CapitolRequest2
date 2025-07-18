@@ -1,0 +1,109 @@
+/* ==================== */
+/* Middle Container     */
+/* ==================== */
+#middle-container {
+    position: fixed;
+    top: 0;
+    right: 25%;
+    width: 50%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #E9F2F9, #9ECFF6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9998;
+    padding: 20px;
+}
+
+/* ==================== */
+/* Content              */
+/* ==================== */
+#content {
+    text-align: left;
+    height: 95%;
+    width: 100%;
+}
+
+#middle-container h1 {
+    font-size: clamp(14px, 2vw, 16px);
+    color: #41779C;
+    margin-bottom: clamp(20px, 10vh, 60px);
+} 
+#middle-container h3 {
+    color: #41779C;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+#middle-container p {
+    color: #41779C;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#horizontal {
+    border-bottom: 5px solid #446F95; /* Black horizontal line */
+    margin: 10px 0; /* Add some spacing */ 
+}
+
+/* ==================== */
+/* Table Container      */
+/* ==================== */
+#table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+#table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#table-container th, #table-container td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#table-container th {
+    background-color: #41779C;
+    color: white;
+    font-weight: bold;
+}
+
+#table-container tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* ==================== */
+/* Pagination Controls  */
+/* ==================== */
+#pagination-controls {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#pagination-controls button {
+    padding: 8px 16px;
+    margin: 0 5px;
+    background-color: #41779C;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#pagination-controls button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#page-indicator {
+    margin: 0 10px;
+    font-weight: bold;
+    color: #41779C;
+}

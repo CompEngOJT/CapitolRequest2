@@ -1,0 +1,81 @@
+/* ==================== */
+/* Middle Container     */
+/* ==================== */
+#middle-container {
+    position: fixed;
+    top: 0;
+    right: 25%;
+    width: 50%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #E9F2F9, #9ECFF6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9998;
+    padding: 20px;
+}
+
+/* ==================== */
+/* Content              */
+/* ==================== */
+#content {
+    text-align: left;
+    height: 95%;
+    width: 100%;
+}
+
+#middle-container h1 {
+    color: #41779C;
+    margin-bottom: clamp(20px, 10vh, 60px); 
+}
+
+#middle-container h3 {
+    color: #41779C;
+    font-weight: bold;
+}
+
+#horizontal {
+    border-bottom: 5px solid #446F95; /* Black horizontal line */
+    margin: 10px 0; /* Add some spacing */ 
+}
+
+#content p {
+    color: #41779C;
+}
+
+#squares-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; /* Center the image inside the square */
+    width: 100%;
+}
+
+/* Styles for the square buttons */
+.square-button {
+    width: 40%; /* Adjust width as needed */
+    background: linear-gradient(to bottom, #E9F2F9, #9ECFF6);
+    border: 2px solid #367393; /* Optional: Add a border */
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visual */
+    text-align: center;
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effect */
+}
+
+.square-button:hover {
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.square-button img {
+    max-width: 100%; /* Ensure the image fits inside the square */
+    max-height: 100%;
+}
+
+.square-button p {
+    text-align: center; /* Center the text below the square */
+    margin-top: 20px; /* Add spacing above the text */
+    color: #3F6A91;
+    font-weight: bold;
+}

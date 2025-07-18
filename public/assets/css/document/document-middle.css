@@ -1,0 +1,79 @@
+/* ==================== */
+/* Middle Container     */
+/* ==================== */
+#middle-container {
+    position: fixed;
+    top: 0;
+    right: 25%;
+    width: 50%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #E9F2F9, #9ECFF6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9998;
+    padding: 20px;
+}
+
+/* ==================== */
+/* Content              */
+/* ==================== */
+#content {
+    text-align: left;
+    height: 95%;
+    width: 100%;
+}
+#middle-container h1{
+    color: #41779C;
+    margin-bottom: clamp(20px, 10vh, 60px); 
+}
+
+#middle-container h3{   
+    color: #41779C;
+    font-weight: bold;
+}
+#middle-container p{
+    color: #41779C;
+}
+
+#horizontal {
+    border-bottom: 5px solid #446F95; /* Black horizontal line */
+    margin: 10px 0; /* Add some spacing */
+}
+
+#square {
+    display: flex;
+    justify-content: center; /* Center the square container */
+    align-items: center; /* Center the image inside the square */
+    width: 50%; /* Adjust size as needed */
+    height: auto;
+    background-color: #85B2D2; /* Background color for the square */
+    border: 5px solid white; /* Optional: Add a border */
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+    margin: 20px auto; /* Center the square container */
+    border-radius: 20px;
+}
+
+#square img {
+    max-width: 100%; /* Ensure the image fits inside the square */
+    max-height: 100%;
+}
+
+#middle-container h2 {
+    text-align: center; /* Center the h2 below the square */
+    margin-top: 20px; /* Add spacing above the h2 */
+    color: #113B58;
+    font-weight: bold;
+}
+#fuel-link {
+    display: block; /* Ensure the link takes up the full space of the container */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+#fuel-link img {
+    max-width: 100%; /* Ensure the image fits inside the square */
+    max-height: 100%;
+}
+#fuel img:hover {
+    transform: scale(1.1);
+  }

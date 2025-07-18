@@ -1,0 +1,125 @@
+/* ==================== */
+/* Body and HTML        */
+/* ==================== */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #E9F2F9, #9ECFF6);
+  overflow: hidden; /* Prevent scrolling during animation */
+}
+
+/* ==================== */
+/* Container            */
+/* ==================== */
+#container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #E9F2F9, #9ECFF6);
+  border-right: 5px solid #446F95;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 20px;
+}
+
+/* ==================== */
+/* Logo                 */
+/* ==================== */
+#logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#logo img {
+  width: clamp(50px, 5vw, 70px);
+  height: auto;
+}
+
+/* ==================== */
+/* Profile              */
+/* ==================== */
+#profile {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#profile img {
+  width: clamp(80px, 10vw, 120px);
+  height: clamp(80px, 10vw, 120px);
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #446F95;
+}
+
+/* ==================== */
+/* Admin Badge          */
+/* ==================== */
+.admin-badge {
+  background: #2C66A8;
+  color: white;
+  font-size: clamp(12px, 1.5vw, 14px);
+  font-weight: bold;
+  padding: clamp(6px, 1vw, 8px) clamp(16px, 2vw, 24px);
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* ==================== */
+/* Sidebar              */
+/* ==================== */
+#sidebar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.sidebar-link {
+  width: 100%;
+  padding: 12px 20px;
+  text-align: center;
+  color: #446F95;
+  font-size: 54px;
+  text-decoration: none;
+  transition: border-left 0.3s ease;
+  border-left: 4px solid transparent;
+  margin-bottom: 5px;
+}
+
+.sidebar-link.active,
+.sidebar-link:hover {
+  border-left: 4px solid #2C66A8;
+  color: #2C66A8;
+  font-weight: bold;
+}
+
+.sidebar-link.active {
+  font-weight: bold;
+}
+
+/* ==================== */
+/* Logout               */
+/* ==================== */
+#logout {
+  margin-top: 20%;
+  text-align: center;
+}
+
+#logout img {
+  width: clamp(40px, 5vw, 50px);
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#logout img:hover {
+  transform: scale(1.1);
+}

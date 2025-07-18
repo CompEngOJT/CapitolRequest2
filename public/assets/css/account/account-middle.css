@@ -1,0 +1,158 @@
+/* ==================== */
+/* Middle Container     */
+/* ==================== */
+#middle-container {
+    position: fixed;
+    top: 0;
+    right: 25%;
+    width: 50%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #E9F2F9, #9ECFF6);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 9998;
+    padding: 20px;
+}
+
+/* ==================== */
+/* Middle Content Adjustments  */
+/* ==================== */
+#middle-content {
+    text-align: left;
+    width: 100%;
+    max-width: 800px;
+}
+
+#middle-content h1 {
+    color: #41779C;
+    margin-bottom: clamp(20px, 10vh, 60px);
+    font-size: 20px;
+}
+
+#middle-content h3 {
+    color: #41779C;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+#middle-horizontal-line {
+    border-bottom: 5px solid #446F95;
+    margin: 10px 0;
+}
+
+#middle-content p {
+    color: #41779C;
+    font-size: 16px;
+    margin-bottom: 50px;
+}
+
+/* ==================== */
+/* Center Account Card  */
+/* ==================== */
+#middle-account-container {
+    display: flex;
+    justify-content: center;
+}
+
+#middle-account-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* ==================== */
+/* Header Section       */
+/* ==================== */
+#middle-account-header {
+    background: #446F95;
+    padding: 30px;
+    position: relative;
+}
+
+#middle-profile-section {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 20px;
+    bottom: -50px;
+}
+
+#middle-profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+#middle-admin-text {
+    font-weight: bold;
+    color: #4F80A1;
+    text-align: left;
+    padding-left: 130px;
+    margin-top: 0;
+    font-size: 1.25rem;
+}
+
+/* ==================== */
+/* Account Details      */
+/* ==================== */
+#middle-account-body {
+    padding: 20px;
+}
+
+.middle-info-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.middle-info-row label {
+    font-size: 0.875rem;
+    color: #666;
+    margin-right: 10px;
+    width: 100px;
+    flex-shrink: 0;
+}
+
+.middle-info-box {
+    background: #4F80A1;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+}
+.password-info-box {
+    background: #4F80A1;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* ==================== */
+/* Reset Password Link  */
+/* ==================== */
+#middle-reset-password {
+    background: none;
+    border: none;
+    color: #446F95;
+    font-size: 0.875rem;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+#middle-reset-password:hover {
+    color: #2A4A6B;
+}

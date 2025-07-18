@@ -1,0 +1,181 @@
+/* ==================== */
+/* Media Queries        */
+/* ==================== */
+
+/* Large screens (1920x1080) */
+@media (max-width: 1920px) and (max-height: 1080px) {
+  #middle-container h1 {
+    font-size: 30px;
+  }
+
+  #middle-container h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  #middle-container p {
+    font-size: 24px;
+    margin-bottom: 70px;
+  }
+
+  #request-now {
+    font-size: 24px;
+    padding: 16px 32px;
+  }
+
+  #paglaum img,
+  #copyright img {
+    max-width: 80%;
+  }
+}
+
+/* Medium screens (1440x1080) */
+@media (max-width: 1440px) and (max-height: 1080px) {
+  #middle-container h1 {
+    font-size: 24px;
+  }
+
+  #middle-container h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  #middle-container p {
+    font-size: 19px;
+    margin-bottom: 70px;
+  }
+
+  #request-now {
+    font-size: 15px;
+    padding: 16px 32px;
+    margin-bottom: 10px;
+  }
+
+  #paglaum img,
+  #copyright img {
+    max-width: 80%;
+  }
+}
+
+/* Small screens (960x1080) */
+@media (max-width: 960px) and (max-height: 1080px) {
+  #middle-container h1 {
+    font-size: 20px;
+  }
+
+  #middle-container h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  #middle-container p {
+    font-size: 19px;
+    margin-bottom: 70px;
+  }
+
+  #request-now {
+    font-size: 19px;
+    padding: 16px 32px;
+    margin-bottom: 70px;
+  }
+
+  #paglaum img,
+  #copyright img {
+    max-width: 80%;
+  }
+}
+
+/* Large screens (1920x720) */
+@media (max-width: 1920px) and (max-height: 720px) {
+  #content {
+    height: 95%;
+  }
+
+  #middle-container h1 {
+    font-size: 20px;
+  }
+
+  #middle-container h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  #middle-container p {
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+
+  #request-now {
+    font-size: 14px;
+    padding: 14px 30px;
+    margin-bottom: 10px;
+  }
+
+  #paglaum img,
+  #copyright img {
+    max-width: 70%;
+  }
+}
+
+/* Medium screens (1440x720) */
+@media (max-width: 1440px) and (max-height: 720px) {
+  #content {
+    height: 95%;
+  }
+
+  #middle-container h1 {
+    font-size: 20px;
+  }
+
+  #middle-container h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  #middle-container p {
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+
+  #request-now {
+    font-size: 14px;
+    padding: 14px 30px;
+    margin-bottom: 10px;
+  }
+
+  #paglaum img,
+  #copyright img {
+    max-width: 80%;
+  }
+}
+
+/* Small screens (960x720) */
+@media (max-width: 960px) and (max-height: 720px) {
+  #content {
+    height: 95%;
+  }
+
+  #middle-container h1 {
+    font-size: 20px;
+  }
+
+  #middle-container h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  #middle-container p {
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+
+  #request-now {
+    font-size: 14px;
+    padding: 14px 30px;
+  }
+
+  #paglaum img,
+  #copyright img {
+    max-width: 80%;
+  }
+}

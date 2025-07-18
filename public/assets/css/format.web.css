@@ -1,0 +1,25 @@
+/* ==================== */
+/* Middle Container     */
+/* ==================== */
+#middle-container {
+    position: fixed;
+    top: 0;
+    right: 25%;
+    width: 50%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #E9F2F9, #9ECFF6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9998;
+    padding: 20px;
+}
+
+/* ==================== */
+/* Content              */
+/* ==================== */
+#content {
+    text-align: left;
+    height: 95%;
+    width: 100%;
+}
